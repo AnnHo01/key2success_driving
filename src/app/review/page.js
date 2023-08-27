@@ -74,6 +74,9 @@ function Home() {
                   <label for='fname'>Your Experience</label>
                   <textarea id='experience' name='experience' rows={4} placeholder='Tell Us What You Think'></textarea>
                 </Col>
+                <Col xs={12} lg={8}>
+                  <button type="submit" className='call_btn'>Send Feedback</button>
+                </Col>
               </Row>
             </Container>
           </form>
