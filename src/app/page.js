@@ -1,17 +1,28 @@
 'use client';
 
 //Import plugins
+import { useEffect } from 'react';
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 
 // Import components
 import Header from './components/nav';
+import { getReviews } from './components/fetchContext';
 // Import media
 // Import styles
 import styles from '../scss/main.module.scss';
-
 export default function Home() {
+  useEffect(() => {
+    const myAsync = async() => {
+      await getReviews().then((data) => {
+        console.log(data);
+      })
+    }
+
+    myAsync();
+  }, [])
+
   return (
     <>
     <Header />
