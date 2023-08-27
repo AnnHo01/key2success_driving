@@ -40,10 +40,10 @@ function Footer() {
                     <h6>Hours of Services</h6>
                     <ul>
                         <li>
-                            <a>Monday - Friday</a>
+                            <a>Monday - Sunday</a>
                         </li>
                         <li>
-                            <a>9:00 am - 5:00 pm</a>
+                            <a>7:00 am - 8:00 pm</a>
                         </li>
                     </ul>
                 </Col>

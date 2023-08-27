@@ -137,7 +137,8 @@ export default function Home() {
             <Row>
               <Col className='mb-3'>
                 <h2>Services</h2>
-                <p>* Pricing is different for those who live far away from South West of Winnipeg</p>
+                <p>Service available in English, Hindi, and Gujarati.</p>
+                <p>* Pricing is different for those who live far away from South West of Winnipeg.</p>
               </Col>
             </Row>
             <Row className='d-flex justify-content-center'>
