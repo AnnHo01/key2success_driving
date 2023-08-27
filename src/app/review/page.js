@@ -63,12 +63,12 @@ function Home() {
             <Container>
               <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
                 <Col xs={12} lg={8}>
-                  <label htmlFor='fname'>Name</label>
-                  <input type='text' id='fname' name='fname' placeholder='Type Your Name' />
+                  <label htmlFor='fname'>Name*</label>
+                  <input type='text' id='fname' name='fname' placeholder='Type Your Name' required />
                 </Col>
                 <Col xs={12} lg={8}>
-                  <label htmlFor='email'>Email*</label>
-                  <input type='email' id='email' name='email' placeholder='Type Your Email' required />
+                  <label htmlFor='email'>Email</label>
+                  <input type='email' id='email' name='email' placeholder='Type Your Email'/>
                 </Col>
                 <Col xs={12} lg={8}>
                   <label htmlFor='pnum'>Phone Number</label>
