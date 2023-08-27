@@ -58,7 +58,7 @@ function Header(props) {
     return (
         <div id="home">
             <Navbar className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`} expand="lg" collapseOnSelect='true' >
-                <Container className={`py-3 ${styles.add_border}`}>
+                <Container fluid="lg" className={`py-3 ${styles.add_border}`}>
                     <Link className={`${styles.logo}`} href="/">
                         <Image src="/key2success-logo-full.svg" fill={true} style={{objectFit: 'contain'}} alt="Logo" />
                     </Link>

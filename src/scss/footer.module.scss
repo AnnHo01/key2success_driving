@@ -1,0 +1,40 @@
+@import
+    'vars';
+
+.footer{
+    background-color: $main-color;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+
+    a{
+        text-decoration: none;
+        color: #fff !important;
+
+        &:hover, &:active, &:focus, &:focus-visible{
+            color: $sec-color;
+        }
+    }
+
+    p{
+        color: #fff;
+    }
+
+    h6{
+        width: 150px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #fff;
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    .logo{
+        width: 180px;
+        height: 51px;
+        position: relative;
+    }
+
+}
