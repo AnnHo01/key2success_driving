@@ -3,7 +3,7 @@ const apiUrl = 'https://api.netlify.com/api/v1/';
 const token = 'UwpTiKClDp56Sgb5tPLuUQMgztlCDSEktiFXAHxe8Ho';
 
 export function getReviews(){
-    return fetch(apiUrl + '', {
+    return fetch(apiUrl + 'forms/64eb7278a7b0640008c67b9e/submissions', {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',

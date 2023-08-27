@@ -1,7 +1,7 @@
 'use client';
 
 //Import plugins
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
@@ -13,10 +13,13 @@ import { getReviews } from './components/fetchContext';
 // Import styles
 import styles from '../scss/main.module.scss';
 export default function Home() {
+  const [reviews, setReviews] = useState();
+
   useEffect(() => {
     const myAsync = async() => {
-      await getReviews().then((data) => {
+      await getReviews().then((response) => response.json()).then((data) => {
         console.log(data);
+        setReviews(data);
       })
     }
 
@@ -206,26 +209,20 @@ export default function Home() {
                   <div className={`${styles.star_lt}`}>
                     <Image src="/icon/star-lt-icn.svg" alt="Star Icon" fill={true} />
                   </div>
-                  <div className={`${styles.cont}`}>
-                    <Row>
-                      <Col xs={3}>
-                        <p>Name F</p>
-                      </Col>
-                      <Col xs={9} className='text-start'>
-                        <p className='fw-lighter'>Reviews will be written here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut est imperdiet, efficitur augue vel, </p>
-                      </Col>
-                    </Row>
-                  </div>
-                  <div className={`${styles.cont}`}>
-                    <Row>
-                      <Col xs={3}>
-                        <p>Name F</p>
-                      </Col>
-                      <Col xs={9} className='text-start'>
-                        <p className='fw-lighter'>Reviews will be written here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut est imperdiet, efficitur augue vel, </p>
-                      </Col>
-                    </Row>
-                  </div>
+                  {reviews != undefined && reviews.map((review) => {
+                    return(
+                      <div className={`${styles.cont}`} key={review.id}>
+                        <Row>
+                          <Col xs={3}>
+                            <p>{review.title}</p>
+                          </Col>
+                          <Col xs={9} className='text-start'>
+                            <p className='fw-lighter'>{review.data.experience}</p>
+                          </Col>
+                        </Row>
+                      </div>);
+                  })
+                  }
                   <div className={`${styles.star_rt}`}>
                     <Image src="/icon/star-rt-icn.svg" alt="Star Icon" fill={true} />
                   </div>
