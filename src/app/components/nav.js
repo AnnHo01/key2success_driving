@@ -79,10 +79,10 @@ function Header(props) {
                 <Container fluid className='g-0 text-center bg-lg-main mt-lg-0 d-block d-lg-none'>
                     <Navbar.Collapse className={`justify-content-end py-2 py-sm-3 ${styles.navlist}`}>
                         <Nav className="me-auto">
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' || props.page == 'review' ? '/#' : ''}home`}>Home</Nav.Link>
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' || props.page == 'review' ? '/#' : ''}features`}>About Us</Nav.Link>
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' || props.page == 'review' ? '/#' : ''}pricing`}>Services</Nav.Link>
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' || props.page == 'review' ? '/#' : ''}reviews`}>Reviews</Nav.Link>
+                            <Nav.Link className={`${props.page == 'contact' || props.page == 'review' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' || props.page == 'review' ? '/#' : ''}home`}>Home</Nav.Link>
+                            <Nav.Link className={`${props.page == 'contact' || props.page == 'review' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' || props.page == 'review' ? '/#' : ''}features`}>About Us</Nav.Link>
+                            <Nav.Link className={`${props.page == 'contact' || props.page == 'review' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' || props.page == 'review' ? '/#' : ''}pricing`}>Services</Nav.Link>
+                            <Nav.Link className={`${props.page == 'contact' || props.page == 'review' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' || props.page == 'review' ? '/#' : ''}reviews`}>Reviews</Nav.Link>
                             <Nav.Link className={`${props.page !== 'review' ? '' : 'scroll-to'}`} href={`${props.page !== 'review' ? '/review#' : ''}stories`}>Success Stories</Nav.Link>
                             <Nav.Link href="contact">Contact Us</Nav.Link>
                         </Nav>
