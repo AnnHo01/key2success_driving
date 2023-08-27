@@ -2,7 +2,6 @@ import '../scss/App.scss'
 import '../scss/custom.bootstrap.scss'
 import { Abril_Fatface, Old_Standard_TT, Open_Sans } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/nav';
 import Footer from './components/footer';
 
 const abril = Abril_Fatface({
@@ -49,7 +48,6 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${abril.variable} ${old_stand.variable} ${open.variable}`}>
-        <Header />
         {children}
         <Footer />
       </body>

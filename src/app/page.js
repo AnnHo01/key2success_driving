@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 
 // Import components
+import Header from './components/nav';
 // Import media
 // Import styles
 import styles from '../scss/main.module.scss';
@@ -13,13 +14,14 @@ import styles from '../scss/main.module.scss';
 export default function Home() {
   return (
     <>
+    <Header />
       <header className='bg-img position-relative' style={{backgroundImage: 'url("/cover-1.png")'}}>
-        <div className='overlay dark d-flex align-items-end'>
+        <div className='overlay dark d-flex align-items-end align-items-lg-center'>
           <Container>
               <Row>
-                  <Col className='pb-5'>
-                      <h1>Unlock Your Path<br />to Success</h1>
-                      <p className='mb-4'>Apply now to accelerate your driving journey with Key2Success Driving School!</p>
+                  <Col className='mb-5 mb-lg-0 headline'>
+                      <h1 className='mb-lg-0'>Unlock Your Path<br />to Success</h1>
+                      <p className='mb-4 mb-lg-0'>Apply now to accelerate your driving journey with Key2Success Driving School!</p>
                       <Link href="/contact" className='call_btn'>
                           {/* <div> */}
                             <span>Sign Up Today!</span>
@@ -31,7 +33,7 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <section>
+        <section id='features'>
           <Container>
             <Row>
               <Col className='text-center'>
@@ -61,7 +63,7 @@ export default function Home() {
                   </div>
                 </div>
               </Col>
-              <Col xs={12} lg={6} className='mt-4 pt-2'>
+              <Col xs={12} lg={6} className='mt-4 pt-2 mt-lg-5 pt-lg-3'>
                 <div className='cont-box flex-lg-row-reverse '>
                   <div className='icn-box'>
                     <Image src="/icon/shield-icn.svg" fill={true} style={{objectFit: 'contain'}} alt="Expert Instructors" />
@@ -72,7 +74,7 @@ export default function Home() {
                   </div>
                 </div>
               </Col>
-              <Col xs={12} lg={6} className='mt-4 pt-2'>
+              <Col xs={12} lg={6} className='mt-4 pt-2 mt-lg-5 pt-lg-3'>
                 <div className='cont-box flex-row-reverse'>
                   <div className='icn-box'>
                     <Image src="/icon/handshake-icn.svg" fill={true} style={{objectFit: 'contain'}} alt="Expert Instructors" />
@@ -83,7 +85,7 @@ export default function Home() {
                   </div>
                 </div>
               </Col>
-              <Col xs={12} lg={6} className='mt-4 pt-2'>
+              <Col xs={12} lg={6} className='mt-4 pt-2 mt-lg-5 pt-lg-3'>
                 <div className='cont-box'>
                   <div className='icn-box'>
                     <Image src="/icon/cap-wheel-icn.svg" fill={true} style={{objectFit: 'contain'}} alt="Expert Instructors" />
@@ -94,7 +96,7 @@ export default function Home() {
                   </div>
                 </div>
               </Col>
-              <Col xs={12} lg={6} className='mt-4 pt-2'>
+              <Col xs={12} lg={6} className='mt-4 pt-2 mt-lg-5 pt-lg-3'>
                 <div className='cont-box flex-row-reverse flex-lg-row'>
                   <div className='icn-box'>
                     <Image src="/icon/sched-icn.svg" fill={true} style={{objectFit: 'contain'}} alt="Expert Instructors" />
@@ -105,7 +107,7 @@ export default function Home() {
                   </div>
                 </div>
               </Col>
-              <Col xs={12} className='mt-4 pt-2 text-center'>
+              <Col xs={12} className='mt-4 pt-2 text-center mt-lg-5 pt-lg-4'>
                 <Link href="/contact" className='call_btn'>
                     {/* <div> */}
                       <span>Contact Now</span>
@@ -119,11 +121,12 @@ export default function Home() {
           <div className='divider-hor'>
           </div>
         </section>
-        <section className='bg-yel text-center'>
+        <section className='bg-yel text-center' id='pricing'>
           <Container>
             <Row>
               <Col className='mb-3'>
                 <h2>Services</h2>
+                <p>* Pricing is different for those who live far away from South West of Winnipeg</p>
               </Col>
             </Row>
             <Row className='d-flex justify-content-center'>
@@ -164,9 +167,6 @@ export default function Home() {
                   <p>Inlcudes 5 lessons, each 1.5 hours long.</p>
                 </div>
               </Col>
-              <Col xs={12} lg={8} className='text-start py-2 py-lg-0'>
-                <p>* Pricing is different for those who live far away from South West of Winnipeg</p>
-              </Col>
             </Row>
           </Container>
         </section>
@@ -174,22 +174,22 @@ export default function Home() {
           <div className='divider-ver'>
           </div>
         </section>
-        <section className='text-center'>
+        <section className='text-center' id='reviews'>
           <Container>
             <Row>
-              <Col className='mb-4'>
+              <Col className='mb-4 pb-lg-5'>
                 <h2>Real folks, real reviews</h2>
               </Col>
             </Row>
             <Row>
-              <Col className='mb-5'>
+              <Col className='mb-5 pb-lg-5'>
                 <Link href="/review" className='call_btn' >
                   Write a review
                 </Link>
               </Col>
             </Row>
-            <Row>
-              <Col>
+            <Row className='justify-content-center'>
+              <Col xs={12} lg={8}>
                 <div className={`${styles.review_tbl}`}>
                   <div className={`${styles.star_lt}`}>
                     <Image src="/icon/star-lt-icn.svg" alt="Star Icon" fill={true} />
@@ -230,9 +230,9 @@ export default function Home() {
           <Container>
             <Row className='d-flex justify-content-center text-center'>
               <Col xs={12} className='mb-4'>
-                <h2>Give us a Call</h2>
+                <h2>Give us a Call!</h2>
               </Col>
-              <Col xs={12} className='mb-4'>
+              <Col xs={12} className='mb-4 pb-lg-4'>
                 <p>Take the First Step Towards Driving Independence. Call Now to Book Your Lesson!</p>
               </Col>
               <Col xs={12}>

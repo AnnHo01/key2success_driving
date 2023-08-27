@@ -55,7 +55,7 @@ function Footer() {
             </Row>
             <Row className='text-center'>
                 <Col xs={12}>
-                    <p>© 2023 Key2Success Driving School. All Rights Reserved</p>
+                    <p className='mb-lg-0'>© 2023 Key2Success Driving School. All Rights Reserved</p>
                 </Col>
             </Row>
         </Container>

@@ -67,11 +67,11 @@ function Header(props) {
                     </Navbar.Toggle>
                     <Navbar.Collapse className="justify-content-end d-none d-lg-block">
                         <Nav className="me-auto" >
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}home`}>Home</Nav.Link>
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}features`}>About Us</Nav.Link>
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}pricing`}>Services</Nav.Link>
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}reviews`}>Reviews</Nav.Link>
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}stories`}>Success Stories</Nav.Link>
+                            <Nav.Link className={`${props.page == 'contact' || props.page == 'review' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}home`}>Home</Nav.Link>
+                            <Nav.Link className={`${props.page == 'contact' || props.page == 'review' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}features`}>About Us</Nav.Link>
+                            <Nav.Link className={`${props.page == 'contact' || props.page == 'review' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}pricing`}>Services</Nav.Link>
+                            <Nav.Link className={`${props.page == 'contact' || props.page == 'review' ? '' : 'scroll-to'} me-3`} href={`${props.page == 'contact' ? '/#' : ''}reviews`}>Reviews</Nav.Link>
+                            <Nav.Link className={`${props.page !== 'review' ? '' : 'scroll-to'} me-3`} href={`${props.page !== 'review' ? '/review#' : ''}stories`}>Success Stories</Nav.Link>
                             <Nav.Link href="contact">Contact Us</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
@@ -83,7 +83,7 @@ function Header(props) {
                             <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' ? '/#' : ''}features`}>About Us</Nav.Link>
                             <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' ? '/#' : ''}pricing`}>Services</Nav.Link>
                             <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' ? '/#' : ''}reviews`}>Reviews</Nav.Link>
-                            <Nav.Link className={`${props.page == 'contact' ? '' : 'scroll-to'}`} href={`${props.page == 'contact' ? '/#' : ''}stories`}>Success Stories</Nav.Link>
+                            <Nav.Link className={`${props.page !== 'review' ? '' : 'scroll-to'}`} href={`${props.page !== 'review' ? '/review#' : ''}stories`}>Success Stories</Nav.Link>
                             <Nav.Link href="contact">Contact Us</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
