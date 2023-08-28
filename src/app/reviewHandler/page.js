@@ -45,7 +45,7 @@ function Home() {
         }
         
         myAsync();
-    }, [submission])
+    }, [])
     
     return (
         <>
