@@ -70,7 +70,7 @@ function Home() {
                 </div>
             </header>
             <main>
-                <section style={{height: 0, overflow: 'hidden', padding: 0}}>
+                <section>
                     <form name="approved_form" method="POST" netlify>
                         <input type="hidden" name="form-name" value="approved_form" />
                         <Container>
