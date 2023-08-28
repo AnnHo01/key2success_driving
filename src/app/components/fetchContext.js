@@ -11,3 +11,23 @@ export function getReviews(){
         },
     })
 }
+
+export function getSubmission(id){
+    return fetch(apiUrl + `submissions/${id}`, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+    })
+}
+
+export function deleteSubmission(id){
+    return fetch(apiUrl + `submissions/${id}`, {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+    })
+}
