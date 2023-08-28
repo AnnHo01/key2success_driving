@@ -1,5 +1,6 @@
 import '../scss/App.scss'
 import '../scss/custom.bootstrap.scss'
+import Script from 'next/script'
 import { Abril_Fatface, Old_Standard_TT, Open_Sans } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/footer';
@@ -55,6 +56,16 @@ export default function RootLayout({ children }) {
           gtag('js', new Date());
 
           gtag('config', 'G-6CLJ2WRYNX');`,
+        }} />
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11180674865" strategy="beforeInteractive"></Script>
+        <Script id="google-ads-tag" strategy="beforeInteractive" dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-11180674865');`,
         }} />
       </head>
       <body className={`${abril.variable} ${old_stand.variable} ${open.variable}`}>
