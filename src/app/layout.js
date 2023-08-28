@@ -46,6 +46,16 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-6CLJ2WRYNX" strategy="beforeInteractive"></Script>
+        <Script id="google-analytic-tag" strategy="beforeInteractive" dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-6CLJ2WRYNX');`,
+        }} />
       </head>
       <body className={`${abril.variable} ${old_stand.variable} ${open.variable}`}>
         {children}
