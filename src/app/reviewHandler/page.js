@@ -71,8 +71,8 @@ function Home() {
             </header>
             <main>
                 <section style={{height: 0, overflow: 'hidden', padding: 0}}>
-                    <form name="approved_exp_form" method="POST" onSubmit={handleSubmit} data-netlify={true} netlify>
-                        <input type="hidden" name="form-name" value="approved_exp_form" />
+                    <form name="approved_form" method="POST" netlify>
+                        <input type="hidden" name="form-name" value="approved_form" />
                         <Container>
                         <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
                             <Col xs={12} lg={8}>
