@@ -36,7 +36,7 @@ function Home() {
                     console.log(data.data);
                     setSubmisison(data.data);
                 })
-                setTimeout(handleSubmit, 1500);
+                // setTimeout(handleSubmit, 1500);
             } else {
                 // await deleteSubmission(submissionID);
                 console.log('reject');
