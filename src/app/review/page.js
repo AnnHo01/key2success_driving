@@ -76,7 +76,7 @@ function Home() {
                   <input type='number' id='pnum' name='pnum' placeholder='Type Your Phone' />
                 </Col>
                 <Col xs={12} lg={8}>
-                  <label htmlFor='fname'>Your Experience</label>
+                  <label htmlFor='experience'>Your Experience</label>
                   <textarea id='experience' name='experience' rows={4} placeholder='Tell Us What You Think'></textarea>
                 </Col>
                 <Col xs={12} lg={8} className='d-flex justify-content-center'>
@@ -168,19 +168,19 @@ function Home() {
                         <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
                             <Col xs={12} lg={8}>
                             <label htmlFor='fname'>Name*</label>
-                            <input type='text' id='fname' name='fname' placeholder='Type Your Name' defaultValue={submission != undefined && submission.fname} required />
+                            <input type='text' id='afname' name='afname' placeholder='Type Your Name'  required />
                             </Col>
                             <Col xs={12} lg={8}>
-                            <label htmlFor='email'>Email</label>
-                            <input type='email' id='email' name='email' placeholder='Type Your Email' defaultValue={submission != undefined && submission.email} />
+                            <label htmlFor='aemail'>Email</label>
+                            <input type='email' id='aemail' name='aemail' placeholder='Type Your Email' />
                             </Col>
                             <Col xs={12} lg={8}>
-                            <label htmlFor='pnum'>Phone Number</label>
-                            <input type='number' id='pnum' name='pnum' placeholder='Type Your Phone' defaultValue={submission != undefined && submission.pnum} />
+                            <label htmlFor='apnum'>Phone Number</label>
+                            <input type='number' id='apnum' name='apnum' placeholder='Type Your Phone' />
                             </Col>
                             <Col xs={12} lg={8}>
-                            <label htmlFor='fname'>Your Experience</label>
-                            <textarea id='experience' name='experience' rows={4} placeholder='Tell Us What You Think' defaultValue={submission != undefined && submission.experience}></textarea>
+                            <label htmlFor='aexperience'>Your Experience</label>
+                            <textarea id='aexperience' name='aexperience' rows={4} placeholder='Tell Us What You Think' ></textarea>
                             </Col>
                             <Col xs={12} lg={8} className='d-flex justify-content-center'>
                             <button type="submit" className='call_btn'>Send Feedback</button>
