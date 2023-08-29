@@ -162,7 +162,7 @@ function Home() {
           </Container>
         </section>
                 <section>
-                    <form name="approved_form" method="POST" netlify>
+                    <form name="approved_form" method="POST" action='/thanks' netlify>
                         <input type="hidden" name="form-name" value="approved_form" />
                         <Container>
                         <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
