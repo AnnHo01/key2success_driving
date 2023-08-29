@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from 'react-bootstrap';
 //Import Components
-import { deleteSubmission, getSubmission } from "../components/fetchContext";
+import { approveReview, deleteSubmission, getSubmission } from "../components/fetchContext";
 import Header from "../components/nav";
 
 function Home() {
@@ -14,31 +14,17 @@ function Home() {
     const submissionID = search.get('submissionID');
     const method = search.get('method');
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-      
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-      
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
-        })
-          .then(() => navigate("/thanks"))
-          .catch((error) => alert(error));
-    };
-
     useEffect(() => {
         const myAsync = async() => {
             if(method === 'approve'){
+                await approveReview(submissionID);
                 await getSubmission(submissionID).then((response) => response.json()).then((data) => {
                     console.log(data.data);
                     setSubmisison(data.data);
                 })
                 // setTimeout(handleSubmit, 1500);
             } else {
-                // await deleteSubmission(submissionID);
+                await deleteSubmission(submissionID);
                 console.log('reject');
 
             }

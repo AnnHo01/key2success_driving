@@ -6,24 +6,25 @@ import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 // Import components
-import { getReviews } from '../components/fetchContext';
+import { getReviews, pendReview } from '../components/fetchContext';
 // Import media
 // Import styles
 import styles from '../../scss/main.module.scss';
 import Header from '../components/nav';
 
 function Home() {
-  const [reviews, setReviews] =- useState();
+  const [reviews, setReviews] = useState();
   useEffect(() => {
     const myAsync = async() => {
       await getReviews().then((response) => response.json()).then((data) => {
         console.log(data);
         setReviews(data[0]);
+        pendReview(data[0].id);
       })
     }
 
     myAsync();
-  })
+  }, [])
   return (
     <>
     <Header page={'contact'} />
