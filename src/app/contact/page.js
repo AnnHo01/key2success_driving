@@ -47,8 +47,9 @@ function Home() {
             </Container>
         </section>
         <section className='bg-yel text-center'>
-          {/* <form className={`${styles.exp_form}`} name="contact_form" method="POST"  action='/thanks' netlify>
+          <form className={`${styles.exp_form}`} name="contact_form" method="POST"  action='/thanks' netlify>
             <input type="hidden" name="form-name" value="contact_form" />
+            <input type="hidden" name="tag" value='contact' />
             <Container>
               <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
                 <Col xs={12} lg={8}>
@@ -72,34 +73,7 @@ function Home() {
                 </Col>
               </Row>
             </Container>
-          </form> */}
-          
-          <form className={`${styles.exp_form}`} name="reapp_form" method="POST" action='/thanks' netlify>
-                        <input type="hidden" name="form-name" value="reapp_form" />
-                        <Container>
-                        <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
-                            <Col xs={12} lg={8}>
-                            <label htmlFor='afname'>Name*</label>
-                            <input type='text' id='afname' name='afname' placeholder='Type Your Name'  required />
-                            </Col>
-                            <Col xs={12} lg={8}>
-                            <label htmlFor='aemail'>Email</label>
-                            <input type='email' id='aemail' name='aemail' placeholder='Type Your Email' />
-                            </Col>
-                            <Col xs={12} lg={8}>
-                            <label htmlFor='apnum'>Phone Number</label>
-                            <input type='number' id='apnum' name='apnum' placeholder='Type Your Phone' />
-                            </Col>
-                            <Col xs={12} lg={8}>
-                            <label htmlFor='aexperience'>Your Experience</label>
-                            <textarea id='aexperience' name='aexperience' rows={4} placeholder='Tell Us What You Think' ></textarea>
-                            </Col>
-                            <Col xs={12} lg={8} className='d-flex justify-content-center'>
-                            <button type="submit" className='call_btn'>Send Feedback</button>
-                            </Col>
-                        </Row>
-                        </Container>
-                    </form>
+          </form>
         </section>
       </main>
     </>

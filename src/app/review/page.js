@@ -68,8 +68,8 @@ function Home() {
                   <input type='text' id='fname' name='fname' placeholder='Type Your Name' required />
                 </Col>
                 <Col xs={12} lg={8}>
-                  <label htmlFor='email'>Email</label>
-                  <input type='email' id='email' name='email' placeholder='Type Your Email'/>
+                  <label htmlFor='email'>Email*</label>
+                  <input type='email' id='email' name='email' placeholder='Type Your Email' required />
                 </Col>
                 <Col xs={12} lg={8}>
                   <label htmlFor='pnum'>Phone Number</label>
