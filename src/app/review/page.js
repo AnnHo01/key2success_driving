@@ -161,34 +161,6 @@ function Home() {
             </Row>
           </Container>
         </section>
-                <section>
-                    <form name="approved_form" method="POST" action='/thanks' netlify>
-                        <input type="hidden" name="form-name" value="approved_form" />
-                        <Container>
-                        <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
-                            <Col xs={12} lg={8}>
-                            <label htmlFor='fname'>Name*</label>
-                            <input type='text' id='afname' name='afname' placeholder='Type Your Name'  required />
-                            </Col>
-                            <Col xs={12} lg={8}>
-                            <label htmlFor='aemail'>Email</label>
-                            <input type='email' id='aemail' name='aemail' placeholder='Type Your Email' />
-                            </Col>
-                            <Col xs={12} lg={8}>
-                            <label htmlFor='apnum'>Phone Number</label>
-                            <input type='number' id='apnum' name='apnum' placeholder='Type Your Phone' />
-                            </Col>
-                            <Col xs={12} lg={8}>
-                            <label htmlFor='aexperience'>Your Experience</label>
-                            <textarea id='aexperience' name='aexperience' rows={4} placeholder='Tell Us What You Think' ></textarea>
-                            </Col>
-                            <Col xs={12} lg={8} className='d-flex justify-content-center'>
-                            <button type="submit" className='call_btn'>Send Feedback</button>
-                            </Col>
-                        </Row>
-                        </Container>
-                    </form>
-                </section>
       </main>
     </>
   )
