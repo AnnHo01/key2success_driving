@@ -162,12 +162,19 @@ export default function Home() {
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
                   <p className={`${styles.price}`}>$100</p>
-                  <h4>Road Test Package</h4>
-                  <p>Inlcudes an hour practice before the road test and the use of vehicle for the road test.</p>
+                  <h4>2 Hours Lesson</h4>
+                  <p>Free pickup and dropoff to student designated location.</p>
                 </div>
               </Col>
             </Row>
             <Row className='d-flex justify-content-center'>
+              <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
+                <div className={`${styles.course}`}>
+                  <p className={`${styles.price}`}>$110</p>
+                  <h4>Road Test Package</h4>
+                  <p>Inlcudes an hour practice before the road test and the use of vehicle for the road test.</p>
+                </div>
+              </Col>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
                   <p className={`${styles.price}`}>$275</p>
@@ -209,7 +216,7 @@ export default function Home() {
                   <div className={`${styles.star_lt}`}>
                     <Image src="/icon/star-lt-icn.svg" alt="Star Icon" fill={true} />
                   </div>
-                  {reviews != undefined && reviews.map((review) => {
+                  {reviews != undefined && reviews.slice(0, 10).map((review) => {
                     return(
                       <div className={`${styles.cont}`} key={review.id}>
                         <Row>

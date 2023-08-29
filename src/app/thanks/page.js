@@ -1,17 +1,34 @@
 'use client';
 
 //Import plugins
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 // Import components
+import { getReviews, pendReview } from '../components/fetchContext';
 // Import media
 // Import styles
 import styles from '../../scss/main.module.scss';
 import Header from '../components/nav';
+import { useSearchParams } from 'next/navigation';
 
 function Home() {
+  const search = useSearchParams();
+  const form = search.get('form');
+
+  useEffect(() => {
+    const myAsync = async() => {
+      await getReviews().then((response) => response.json()).then((data) => {
+        console.log(data);
+        if(form === 'review'){
+          pendReview(data[0].id);
+        }
+      })
+    }
+
+    myAsync();
+  }, [])
   return (
     <>
     <Header page={'contact'} />

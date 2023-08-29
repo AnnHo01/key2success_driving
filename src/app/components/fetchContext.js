@@ -30,3 +30,23 @@ export function deleteSubmission(id){
         },
     })
 }
+
+export function pendReview(id){
+    return fetch(apiUrl + `submissions/${id}/spam`, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+    })
+}
+
+export function approveReview(id){
+    return fetch(apiUrl + `submissions/${id}/ham`, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+    })
+}

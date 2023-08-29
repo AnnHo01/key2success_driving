@@ -12,6 +12,10 @@ import styles from '../../scss/main.module.scss';
 import Header from '../components/nav';
 
 function Home() {
+  function handleSubmit(){
+
+  }
+
   return (
     <>
     <Header page={'review'} />
@@ -59,8 +63,9 @@ function Home() {
             </Container>
         </section>
         <section className='bg-yel text-center'>
-          <form className={`${styles.exp_form}`} name="exp_form" method="POST" action='/thanks' netlify>
+          <form className={`${styles.exp_form}`} name="exp_form" method="POST" action='/thanks?form=review' onSubmit={handleSubmit} netlify>
             <input type="hidden" name="form-name" value="exp_form" />
+            <input type="hidden" name="tag" value='review' />
             <Container>
               <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
                 <Col xs={12} lg={8}>
@@ -68,15 +73,15 @@ function Home() {
                   <input type='text' id='fname' name='fname' placeholder='Type Your Name' required />
                 </Col>
                 <Col xs={12} lg={8}>
-                  <label htmlFor='email'>Email</label>
-                  <input type='email' id='email' name='email' placeholder='Type Your Email'/>
+                  <label htmlFor='email'>Email*</label>
+                  <input type='email' id='email' name='email' placeholder='Type Your Email' required />
                 </Col>
                 <Col xs={12} lg={8}>
                   <label htmlFor='pnum'>Phone Number</label>
                   <input type='number' id='pnum' name='pnum' placeholder='Type Your Phone' />
                 </Col>
                 <Col xs={12} lg={8}>
-                  <label htmlFor='fname'>Your Experience</label>
+                  <label htmlFor='experience'>Your Experience</label>
                   <textarea id='experience' name='experience' rows={4} placeholder='Tell Us What You Think'></textarea>
                 </Col>
                 <Col xs={12} lg={8} className='d-flex justify-content-center'>
