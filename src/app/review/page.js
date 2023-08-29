@@ -61,6 +61,7 @@ function Home() {
         <section className='bg-yel text-center'>
           <form className={`${styles.exp_form}`} name="exp_form" method="POST" action='/thanks' netlify>
             <input type="hidden" name="form-name" value="exp_form" />
+            <input type="hidden" name="tag" value='review' />
             <Container>
               <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
                 <Col xs={12} lg={8}>
