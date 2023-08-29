@@ -1,7 +1,7 @@
 const apiUrl = 'https://api.netlify.com/api/v1/';
-const token = process.env.NETLIFY_ACCESS_TOKEN;
 
 export function getReviews(){
+    const token = process.env.NETLIFY_ACCESS_TOKEN;
     return fetch(apiUrl + `forms/${process.env.FORM_ID}/submissions`, {
         method: "GET",
         headers: {
@@ -12,6 +12,7 @@ export function getReviews(){
 }
 
 export function getSubmission(id){
+    const token = process.env.NETLIFY_ACCESS_TOKEN;
     return fetch(apiUrl + `submissions/${id}`, {
         method: "GET",
         headers: {
@@ -22,6 +23,7 @@ export function getSubmission(id){
 }
 
 export function deleteSubmission(id){
+    const token = process.env.NETLIFY_ACCESS_TOKEN;
     return fetch(apiUrl + `submissions/${id}`, {
         method: "DELETE",
         headers: {
@@ -32,6 +34,7 @@ export function deleteSubmission(id){
 }
 
 export function pendReview(id){
+    const token = process.env.NETLIFY_ACCESS_TOKEN;
     return fetch(apiUrl + `submissions/${id}/spam`, {
         method: "PUT",
         headers: {
@@ -42,6 +45,7 @@ export function pendReview(id){
 }
 
 export function approveReview(id){
+    const token = process.env.NETLIFY_ACCESS_TOKEN;
     return fetch(apiUrl + `submissions/${id}/ham`, {
         method: "PUT",
         headers: {
