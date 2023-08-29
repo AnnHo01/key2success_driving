@@ -1,12 +1,10 @@
 'use client';
 
 //Import plugins
-import { redirect, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Container, Row, Col } from 'react-bootstrap';
 //Import Components
-import { approveReview, deleteSubmission, getSubmission } from "../components/fetchContext";
-import Header from "../components/nav";
+import Header from "../../components/nav";
 
 function Home() {
     const search = useSearchParams();
