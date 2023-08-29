@@ -11,15 +11,19 @@ import { getReviews, pendReview } from '../components/fetchContext';
 // Import styles
 import styles from '../../scss/main.module.scss';
 import Header from '../components/nav';
+import { useSearchParams } from 'next/navigation';
 
 function Home() {
-  const [reviews, setReviews] = useState();
+  const search = useSearchParams();
+  const form = search.get('form');
+
   useEffect(() => {
     const myAsync = async() => {
       await getReviews().then((response) => response.json()).then((data) => {
         console.log(data);
-        setReviews(data[0]);
-        pendReview(data[0].id);
+        if(form === 'review'){
+          pendReview(data[0].id);
+        }
       })
     }
 
@@ -34,7 +38,6 @@ function Home() {
               <Row>
                   <Col className='mb-3 mb-lg-0 headline'>
                       <h1>Thank you for your Submission!</h1>
-                      <p>{reviews != undefined && reviews.id}</p>
                   </Col>
               </Row>
           </Container>
