@@ -71,8 +71,8 @@ function Home() {
             </header>
             <main>
                 <section>
-                    <form name="app_form" method="POST" action='/thanks' netlify>
-                        <input type="hidden" name="form-name" value="app_form" />
+                    <form name="reapp_form" method="POST" action='/thanks' netlify>
+                        <input type="hidden" name="form-name" value="reapp_form" />
                         <Container>
                         <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
                             <Col xs={12} lg={8}>
