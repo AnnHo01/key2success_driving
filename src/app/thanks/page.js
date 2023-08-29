@@ -1,17 +1,29 @@
 'use client';
 
 //Import plugins
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 // Import components
+import { getReviews } from '../components/fetchContext';
 // Import media
 // Import styles
 import styles from '../../scss/main.module.scss';
 import Header from '../components/nav';
 
 function Home() {
+  const [reviews, setReviews] =- useState();
+  useEffect(() => {
+    const myAsync = async() => {
+      await getReviews().then((response) => response.json()).then((data) => {
+        console.log(data);
+        setReviews(data[0]);
+      })
+    }
+
+    myAsync();
+  })
   return (
     <>
     <Header page={'contact'} />
@@ -21,6 +33,7 @@ function Home() {
               <Row>
                   <Col className='mb-3 mb-lg-0 headline'>
                       <h1>Thank you for your Submission!</h1>
+                      <p>{reviews != undefined && reviews.id}</p>
                   </Col>
               </Row>
           </Container>

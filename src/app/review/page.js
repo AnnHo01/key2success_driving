@@ -12,6 +12,10 @@ import styles from '../../scss/main.module.scss';
 import Header from '../components/nav';
 
 function Home() {
+  function handleSubmit(){
+    
+  }
+
   return (
     <>
     <Header page={'review'} />
@@ -59,7 +63,7 @@ function Home() {
             </Container>
         </section>
         <section className='bg-yel text-center'>
-          <form className={`${styles.exp_form}`} name="exp_form" method="POST" action='/thanks' netlify>
+          <form className={`${styles.exp_form}`} name="exp_form" method="POST" action='/thanks' onSubmit={handleSubmit} netlify>
             <input type="hidden" name="form-name" value="exp_form" />
             <input type="hidden" name="tag" value='review' />
             <Container>
