@@ -1,4 +1,12 @@
 const apiUrl = 'https://api.netlify.com/api/v1/';
+exports.handler = async function (event, context) {
+    const value = process.env.NETLIFY_ACCESS_TOKEN;
+  
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: `Value of MY_IMPORTANT_VARIABLE is ${value}.` }),
+    };  
+  };
 
 export function getReviews(){
     const token = process.env.NETLIFY_ACCESS_TOKEN;
