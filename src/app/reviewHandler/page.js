@@ -76,7 +76,7 @@ function Home() {
                         <Container>
                         <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
                             <Col xs={12} lg={8}>
-                            <label htmlFor='fname'>Name*</label>
+                            <label htmlFor='afname'>Name*</label>
                             <input type='text' id='afname' name='afname' placeholder='Type Your Name'  required />
                             </Col>
                             <Col xs={12} lg={8}>
