@@ -177,16 +177,20 @@ export default function Home() {
               </Col>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
-                  <p className={`${styles.price}`}>$275</p>
+                  <p className={`${styles.price}`}>$275*</p>
                   <h4>5 Lessons Package (1 hr)</h4>
-                  <p>Inlcudes 5 lessons, each 1 hour long.</p>
+                  <p>Inlcudes 5 lessons, each 1 hour long.
+                    <br /><span className='fst-italic fw-semibold'>*Payment due after the first lesson.</span>
+                  </p>
                 </div>
               </Col>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
-                  <p className={`${styles.price}`}>$375</p>
+                  <p className={`${styles.price}`}>$375*</p>
                   <h4>5 Lessons Package (1.5 hrs)</h4>
-                  <p>Inlcudes 5 lessons, each 1.5 hours long.</p>
+                  <p>Inlcudes 5 lessons, each 1.5 hours long.
+                    <br /><span className='fst-italic fw-semibold'>*Payment due after the first lesson.</span>
+                  </p>
                 </div>
               </Col>
             </Row>
