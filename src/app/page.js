@@ -220,7 +220,7 @@ export default function Home() {
                   <div className={`${styles.star_lt}`}>
                     <Image src="/icon/star-lt-icn.svg" alt="Star Icon" fill={true} />
                   </div>
-                  {reviews != undefined && reviews.slice(0, 15).map((review) => {
+                  {reviews != undefined && reviews.slice(0, 20).map((review) => {
                     return(
                       <div className={`${styles.cont}`} key={review.id}>
                         <Row>
