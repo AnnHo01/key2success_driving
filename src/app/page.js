@@ -161,7 +161,7 @@ export default function Home() {
               </Col>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
-                  <p className={`${styles.price}`}>$100</p>
+                  <p className={`${styles.price}`}>$110</p>
                   <h4>2 Hours Lesson</h4>
                   <p>Free pickup and dropoff to student designated location.</p>
                 </div>
@@ -170,14 +170,14 @@ export default function Home() {
             <Row className='d-flex justify-content-center'>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
-                  <p className={`${styles.price}`}>$110</p>
+                  <p className={`${styles.price}`}>$120</p>
                   <h4>Road Test Package</h4>
                   <p>Inlcudes an hour practice before the road test and the use of vehicle for the road test.</p>
                 </div>
               </Col>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
-                  <p className={`${styles.price}`}>$275*</p>
+                  <p className={`${styles.price}`}>$285*</p>
                   <h4>5 Lessons Package (1 hr)</h4>
                   <p>Inlcudes 5 lessons, each 1 hour long.
                     <br /><span className='fst-italic fw-semibold'>*Payment due after the first lesson.</span>
@@ -186,7 +186,7 @@ export default function Home() {
               </Col>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
-                  <p className={`${styles.price}`}>$375*</p>
+                  <p className={`${styles.price}`}>$385*</p>
                   <h4>5 Lessons Package (1.5 hrs)</h4>
                   <p>Inlcudes 5 lessons, each 1.5 hours long.
                     <br /><span className='fst-italic fw-semibold'>*Payment due after the first lesson.</span>
