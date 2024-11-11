@@ -154,7 +154,7 @@ export default function Home() {
               </Col>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
-                  <p className={`${styles.price}`}>$80</p>
+                  <p className={`${styles.price}`}>$85</p>
                   <h4>1.5 Hour Lesson</h4>
                   <p>Free pickup and dropoff to student designated location.</p>
                 </div>
