@@ -63,7 +63,7 @@ function Home() {
             </Container>
         </section>
         <section className='bg-yel text-center'>
-          <form className={`${styles.exp_form}`} name="exp_form" method="POST" action='/thanks?form=review' onSubmit={handleSubmit} netlify>
+          <form className={`${styles.exp_form}`} name="exp_form" method="POST" action='/thanks?form=review' onSubmit={handleSubmit} netlify="true">
             <input type="hidden" name="form-name" value="exp_form" />
             <input type="hidden" name="tag" value='review' />
             <Container>
