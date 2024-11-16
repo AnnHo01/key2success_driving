@@ -4,7 +4,8 @@
 import React from 'react'
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 // Import components
 // Import media
 // Import styles
@@ -12,8 +13,20 @@ import styles from '../../scss/main.module.scss';
 import Header from '../components/nav';
 
 function Home() {
-  function handleSubmit(){
+  const router = useRouter();
 
+  async function handleSubmit(e){
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const response = await fetch('/__forms.html', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
+    if (response.ok) {
+      router.push('/thanks?form=review');
+    }
   }
 
   return (
