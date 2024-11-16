@@ -20,7 +20,6 @@ function Home() {
   useEffect(() => {
     const myAsync = async() => {
       await getReviews().then((response) => response.json()).then((data) => {
-        console.log(data);
         if(form === 'review'){
           pendReview(data[0].id);
         }

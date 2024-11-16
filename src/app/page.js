@@ -18,7 +18,6 @@ export default function Home() {
   useEffect(() => {
     const myAsync = async() => {
       await getReviews().then((response) => response.json()).then((data) => {
-        console.log(data);
         setReviews(data);
       })
     }
