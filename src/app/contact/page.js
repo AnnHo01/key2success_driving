@@ -4,7 +4,8 @@
 import React from 'react'
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 // Import components
 // Import media
 // Import styles
@@ -12,6 +13,22 @@ import styles from '../../scss/main.module.scss';
 import Header from '../components/nav';
 
 function Home() {
+  const router = useRouter();
+
+  async function handleSubmit(e){
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const response = await fetch('/__forms.html', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    });
+    if (response.ok) {
+      router.push('/thanks');
+    }
+  }
+
   return (
     <>
     <Header page={'contact'} />
@@ -47,7 +64,7 @@ function Home() {
             </Container>
         </section>
         <section className='bg-yel text-center'>
-          <form className={`${styles.exp_form}`} name="contact_form" method="POST"  action='/thanks' netlify>
+          <form className={`${styles.exp_form}`} name="contact_form" method="POST" onSubmit={handleSubmit} action='/thanks' netlify>
             <input type="hidden" name="form-name" value="contact_form" />
             <Container>
               <Row className='d-flex justify-content-center' style={{gap: '40px'}}>
