@@ -17,6 +17,9 @@ function Home() {
 
   async function handleSubmit(e){
     e.preventDefault();
+    const submitBtn = document.querySelector('.call_btn');
+    submitBtn.disabled = true;
+    document.body.style.cursor='wait';
     const form = e.target;
     const formData = new FormData(form);
     const response = await fetch('/__forms.html', {
@@ -25,7 +28,12 @@ function Home() {
       body: new URLSearchParams(formData).toString(),
     });
     if (response.ok) {
+      document.body.style.cursor='auto';
       router.push('/thanks?form=review');
+    } else {
+      document.body.style.cursor='auto';
+      submitBtn.disabled = false;
+      alert('An error occurred while submitting the form. Please try again later.');
     }
   }
 
@@ -98,7 +106,7 @@ function Home() {
                   <textarea id='experience' name='experience' rows={4} placeholder='Tell Us What You Think'></textarea>
                 </Col>
                 <Col xs={12} lg={8} className='d-flex justify-content-center'>
-                  <button type="submit" className='call_btn'>Send Feedback</button>
+                  <button type="submit" className='call_btn' >Send Feedback</button>
                 </Col>
               </Row>
             </Container>
