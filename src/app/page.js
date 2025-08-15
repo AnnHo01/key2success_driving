@@ -146,7 +146,7 @@ export default function Home() {
             <Row className='d-flex justify-content-center'>
               <Col xs={8} lg={4} className='mb-3 g-0 g-lg-3'>
                 <div className={`${styles.course}`}>
-                  <p className={`${styles.price}`}>$55</p>
+                  <p className={`${styles.price}`}>$60</p>
                   <h4>1 Hour Lesson</h4>
                   <p>Free pickup and dropoff to student designated location.</p>
                 </div>
